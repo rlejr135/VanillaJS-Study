@@ -1,38 +1,73 @@
 <!DOCTYPE html>
-<img lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Momentum</title>
-</head>
-    <form id="login-form" class="hidden">
-        <input 
-            required
-            maxlength="15"
-            type="text" 
-            placeholder="What is your name?"
-        />
-        <input type="submit" value = "Log in"/>
-    </form>
-    <h1 id="greeting" class="hidden"></h1>
-    <h2 id="clock">00:00:00</h2>
+<html>
+<title>Homepage</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<style>
+    body,
+    h1 {
+        font-family: "Raleway", sans-serif
+    }
 
-    <form id="todo-form">
-        <input type="text" placeholder="Write a TODO List and press enter" required />
-    </form>
-    <ul id="todo-list"></ul>
+    body,
+    html {
+        height: 100%
+    }
+
+    .bgimg {
+        min-height: 100%;
+        background-position: center;
+        background-size: cover;
+    }
+
+    .hidden {
+        display: none;
+    }
+</style>
+
+<body>
 
 
-    <div id="quote">
-        <span></span>
-        <span></span>
-    </div>
 
-    <div id="weather">
-        <span></span>
-        <span></span>
+    <div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
+        <div class="w3-display-topleft w3-padding-large w3-xlarge">
+            Welcome
+        </div>
+
+        <div class="w3-display-middle w3-center">
+            <h1 class="w3-xxxlarge w3-animate-top">
+                <form id="login-form" class="hidden">
+                    <input class="w3-input w3-border-0 w3-transparent w3-" required maxlength="15" type="text"
+                        placeholder="What is your name?" />
+                </form>
+                <h1 class="w3-xxxlarge w3-animate-top" id="greeting" class="hidden"></h1>
+            </h1>
+            <hr class="w3-border-grey" style="margin:auto;width:40%">
+            <h2 class="w3-large w3-center" id="clock">00:00:00</h2>
+        </div>
+
+        <form class="w3-display-bottomright" id="todo-form">
+            <input type="text" placeholder="Add TODO List" required />
+        </form>
+        <ul id="todo-list"></ul>
+
+
+        <div class="w3-display-bottommiddle" id="quote">
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="w3-display-topright" id="weather">
+            <span></span>
+            <span></span>
+        </div>
+
+
+        <div class="w3-display-bottomleft w3-padding-large">
+            Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a>
+        </div>
     </div>
 
     <script src="js/greeting.js"></script>
