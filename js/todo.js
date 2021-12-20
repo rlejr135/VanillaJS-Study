@@ -1,6 +1,7 @@
 const toDoForm = document.querySelector("#todo-form");
 const toDoInput = toDoForm.querySelector("input");
 const toDoList = document.querySelector("#todo-list");
+const cmd_AddButton = toDoForm.querySelector("#AddButton");
 
 let toDos = [];
 
@@ -10,8 +11,6 @@ function SaveToDos(){
 
 function deleteToDo(event){
     const toDelEl = event.target.parentElement;
-    console.dir(toDelEl.id)
-
     toDos = toDos.filter(elem =>{ return elem.id != toDelEl.id;})
     SaveToDos();
     toDelEl.remove();
@@ -51,7 +50,8 @@ function handleToDoSubmit(event){
 
 
 
-toDoForm.addEventListener("submit", handleToDoSubmit);
+// toDoForm.addEventListener("submit", handleToDoSubmit);
+cmd_AddButton.addEventListener("click", handleToDoSubmit);
 
 const savedToDos = localStorage.getItem("todos");
 if (savedToDos != null){

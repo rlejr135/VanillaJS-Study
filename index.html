@@ -5,26 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="css/style.css">
 <style>
-    body,
-    h1 {
-        font-family: "Raleway", sans-serif
-    }
 
-    body,
-    html {
-        height: 100%
-    }
-
-    .bgimg {
-        min-height: 100%;
-        background-position: center;
-        background-size: cover;
-    }
-
-    .hidden {
-        display: none;
-    }
 </style>
 
 <body>
@@ -39,7 +22,7 @@
         <div class="w3-display-middle w3-center">
             <h1 class="w3-xxxlarge w3-animate-top">
                 <form id="login-form" class="hidden">
-                    <input class="w3-input w3-border-0 w3-transparent w3-" required maxlength="15" type="text"
+                    <input class="w3-input w3-border-0 w3-transparent" required maxlength="15" type="text"
                         placeholder="What is your name?" />
                 </form>
                 <h1 class="w3-xxxlarge w3-animate-top" id="greeting" class="hidden"></h1>
@@ -48,10 +31,14 @@
             <h2 class="w3-large w3-center" id="clock">00:00:00</h2>
         </div>
 
-        <form class="w3-display-bottomright" id="todo-form">
-            <input type="text" placeholder="Add TODO List" required />
-        </form>
-        <ul id="todo-list"></ul>
+        <div class="w3-display-bottomright w3-border-0 w3-transparent" id="todo-form">
+            <input class="w3-transparent" type="text" placeholder="Add TODO List" required/>
+            <button id="AddButton" class="custom-btn btn-1">Add</button>
+            <ul id="todo-list"> </ul>
+        </div>
+        
+        
+        
 
 
         <div class="w3-display-bottommiddle" id="quote">
@@ -67,6 +54,8 @@
 
         <div class="w3-display-bottomleft w3-padding-large">
             Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a>
+            <br>
+            go to <a href="paint.html" target="_blank">Paint</a>
         </div>
     </div>
 
