@@ -1,58 +1,56 @@
 .custom-btn {
-    width: 70px;
-    height: 30px;
+  width: 70px;
+  height: 30px;
 
-    border: 2px solid #000;
-    font-family: 'Lato', sans-serif;
-    font-weight: 500;
-    background: transparent;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    position: relative;
-    display: inline-block;
-  }
+  border: 2px solid #000;
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+}
 
-  .btn-1 {
-    transition: all 0.3s ease;
-  }
-  .btn-1:hover {
-     box-shadow:
-     -7px -7px 20px 0px rgba(9, 10, 10, 0.966),
-     -4px -4px 5px 0px rgba(9, 10, 10, 0.966),
-     7px 7px 20px 0px rgba(9, 10, 10, 0.966),
-     4px 4px 5px 0px rgba(9, 10, 10, 0.966);
-  }
-  
+.btn-1 {
+  transition: all 0.3s ease;
+}
+.btn-1:hover {
+  box-shadow: -7px -7px 20px 0px rgba(9, 10, 10, 0.966),
+    -4px -4px 5px 0px rgba(9, 10, 10, 0.966),
+    7px 7px 20px 0px rgba(9, 10, 10, 0.966),
+    4px 4px 5px 0px rgba(9, 10, 10, 0.966);
+}
 
-  body,
-  h1 {
-      font-family: "Raleway", sans-serif
-  }
+body,
+h1 {
+  font-family: "Raleway", sans-serif;
+}
 
-  body,
-  html {
-      height: 100%
-  }
+body,
+html {
+  height: 100%;
+}
 
-  .bgimg {
-      min-height: 100%;
-      background-position: center;
-      background-size: cover;
-  }
+.bgimg {
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+}
 
-  .hidden {
-      display: none;
-  }
+.hidden {
+  display: none;
+}
 
-  li {
-      list-style: none;
-      position: relative;
-      padding: 3px 0 2px 25px;
-  }
+li {
+  list-style: none;
+  position: relative;
+  padding: 3px 0 2px 25px;
+}
 
-  li::before {
-      content: '*';
-      position: absolute;
-      top: 6px;
-      left: 0;
-  }
+li::before {
+  content: "*";
+  position: absolute;
+  top: 6px;
+  left: 0;
+}

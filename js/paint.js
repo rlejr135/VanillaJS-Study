@@ -12,40 +12,39 @@ let _PaintStart = false;
 let lastX = 0;
 let lastY = 0;
 
+function onMouseMove(event) {
+  ctx.moveTo(lastX, lastY);
 
-function onMouseMove(event){
-    ctx.moveTo(lastX, lastY);
+  lastX = event.offsetX;
+  lastY = event.offsetY;
 
-    lastX = event.offsetX;
-    lastY = event.offsetY;
-
-    if (_PaintStart){
-        console.dir(event)
-        ctx.lineTo(lastX, lastY);
-        ctx.stroke();
-    }
+  if (_PaintStart) {
+    console.dir(event);
+    ctx.lineTo(lastX, lastY);
+    ctx.stroke();
+  }
 }
 
-function onMouseDown(event){
-    _PaintStart = true;
+function onMouseDown(event) {
+  _PaintStart = true;
 }
-function onMouseUp(event){
-    _PaintStart = false;
-}
-
-function onMouseOut(event){
-    _PaintStart = false;
+function onMouseUp(event) {
+  _PaintStart = false;
 }
 
-function onWidthChange(event){
-    ctx.lineWidth = InputWidth.value;
+function onMouseOut(event) {
+  _PaintStart = false;
 }
 
-if (canvas){
-    canvas.addEventListener("mousemove", onMouseMove);
-    canvas.addEventListener("mousedown", onMouseDown);
-    canvas.addEventListener("mouseup", onMouseUp);
-    canvas.addEventListener("mouseout", onMouseOut);
+function onWidthChange(event) {
+  ctx.lineWidth = InputWidth.value;
+}
+
+if (canvas) {
+  canvas.addEventListener("mousemove", onMouseMove);
+  canvas.addEventListener("mousedown", onMouseDown);
+  canvas.addEventListener("mouseup", onMouseUp);
+  canvas.addEventListener("mouseout", onMouseOut);
 }
 
 InputWidth.addEventListener("input", onWidthChange);
